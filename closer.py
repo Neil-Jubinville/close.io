@@ -25,8 +25,11 @@ def opportunityInjector():
 
     payload['urls'] = urls
 
-    requests.post("https://app.close.io/hackwithus/", data = json.dumps(payload) )
+    res = requests.post("https://app.close.io/hackwithus/", data = json.dumps(payload) )
+    print res.status_code
+    print res.json
 
+    # pre-lint yo stuff homies 
     print(json.dumps(payload))
 
 
